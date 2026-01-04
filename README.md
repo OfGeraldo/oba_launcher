@@ -1,97 +1,80 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ObaLauncher - Launcher Android Simples para Idosos
 
-# Getting Started
+![Print da tela inicial](screenshots/home.png)
+![Print da tela de contatos](screenshots/contatos.jpg)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Um launcher Android customizado em **React Native** inspirado no **Obabox**, com interface simplificada para idosos, ícones grandes e navegação intuitiva.
 
-## Step 1: Start Metro
+## 🚀 Funcionalidades Implementadas
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+✅ **Launcher Android nativo** - vira tela inicial do celular  
+✅ **Status real** - bateria e sinal de rede funcionais  
+✅ **6 botões principais** - Ligações, Contatos, Câmera, Galeria, Configurações  
+✅ **Contatos com índice alfabético** - SectionList + sidebar A-Z  
+✅ **Favoritos persistentes** - salvos no AsyncStorage, aparecem no topo  
+✅ **Gerenciar favoritos** - tela dedicada para add/remove  
+✅ **Navegação com pilha** - botão voltar correto entre telas  
+✅ **BackHandler otimizado** - Home fecha app, outras voltam tela anterior  
 
-To start the Metro dev server, run the following command from the root of your React Native project:
 
-```sh
-# Using npm
-npm start
 
-# OR using Yarn
-yarn start
+## 📦 Instalação
+
+```bash
+git clone <repo>
+cd ObaLauncher
+npm install
+# Android
+cd android && gradlew clean && cd ..
+npx react-native run-android
 ```
 
-## Step 2: Build and run your app
+## Permissões necessárias:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+READ_CONTACTS
+READ_PHONE_STATE
+ACCESS_FINE_LOCATION
+CALL_PHONE
 ```
 
-### iOS
+# 🎯 Próximos Passos Sugeridos
+## 🔜 Fácil (1-2h cada)
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+💭 Ícones SVG/PNG nos botões (substituir textos)
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+💭 Tela Galeria (Photos) - react-native-image-picker
 
-```sh
-bundle install
-```
+💭 Tela Câmera - react-native-camera ou expo-camera
 
-Then, and every time you update your native dependencies, run:
+💭 Ligar para SOS direto (configurar números)
 
-```sh
-bundle exec pod install
-```
+💭 Contador de chamadas perdidas reais (CallLog)
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+💭 Tema claro/escuro toggle nas configs
 
-```sh
-# Using npm
-npm run ios
+💭 Backup/restore favoritos via JSON
 
-# OR using Yarn
-yarn ios
-```
+## 🚀 Médio (4-8h cada)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+💭 Lista de apps instalados (PackageManager nativo)
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+💭 Reordenar favoritos (drag & drop)
 
-## Step 3: Modify your app
+💭 Tela de emergência com múltiplos números
 
-Now that you have successfully run the app, let's make changes!
+💭 Suporte a tablets (responsive grid)
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+💭 Notificações push para chamadas perdidas
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🎨 Visual/UX
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+💭 Animações suaves (Reanimated)
 
-## Congratulations! :tada:
+💭 Sons/hápticos nos botões
 
-You've successfully run and modified your React Native App. :partying_face:
+💭 Tamanhos de fonte configuráveis
 
-### Now what?
+💭 Cores customizáveis nas configs
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+💭 Tutorial de primeiro uso
