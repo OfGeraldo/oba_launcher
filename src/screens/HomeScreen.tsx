@@ -58,11 +58,11 @@ const HomeScreen: React.FC<{ onNavigate: (screen: ScreenName) => void }> = ({ on
 
       <HomeGrid onNavigate={onNavigate} />
 
-      <View style={styles.missedCallsBar}>
+      {/* <View style={styles.missedCallsBar}>
         <Text style={styles.missedCallsText}>
           {missedCallsToday} Ligações Perdidas
         </Text>
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 };

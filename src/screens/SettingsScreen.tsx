@@ -3,6 +3,9 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Switch } from 'react-native';
 import { ScreenName } from '../../App';
 import styles from './SettingsScreen.styles';
+import {
+  openLauncherSettings,
+} from '../utils/actions';
 
 type Props = {
   onBack: () => void;
@@ -46,6 +49,11 @@ const SettingsScreen: React.FC<Props> = ({ onBack, onNavigate }) => {
         <View style={styles.settingRow}>
           <Text style={styles.settingTitle}>Tamanho do Texto</Text>
           <Text style={styles.settingValue}>{tamanhoTexto}</Text>
+        </View>
+
+        <View style={styles.settingRow}>
+          <Text style={styles.settingTitle}  onPress={openLauncherSettings}>Tela Inicial Padrão</Text>
+          <Text style={styles.arrow} onPress={openLauncherSettings}>›</Text>
         </View>
       </View>
 

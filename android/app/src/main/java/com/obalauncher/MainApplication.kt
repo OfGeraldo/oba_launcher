@@ -21,6 +21,7 @@ class MainApplication : Application(), ReactApplication {
           // add(MyReactNativePackage())
           add(BatteryPackage());
           add(SignalPackage());
+          add(SystemActionsPackage());
         },
     )
   }

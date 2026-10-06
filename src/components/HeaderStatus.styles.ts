@@ -7,7 +7,7 @@ const headerStatusStyles = StyleSheet.create({
     backgroundColor: '#dcdcdc',
     paddingHorizontal: 8,
     paddingVertical: 6,
-    paddingTop: 28,
+    paddingTop: 12,
   },
   topRow: {
     flexDirection: 'row',
@@ -76,7 +76,7 @@ const headerStatusStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
   timeText: {
-    fontSize: 50,
+    fontSize: 44,
     fontWeight: 'bold',
   },
 });

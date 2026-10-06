@@ -1,4 +1,6 @@
-import { Linking, Alert } from 'react-native';
+import { Linking, Alert, NativeModules, Platform } from 'react-native';
+
+const { SystemActionsModule } = NativeModules;
 
 const handleError = (msg: string) => {
   Alert.alert('Erro', msg);
@@ -36,4 +38,18 @@ export const openCalendar = () => {
   Linking.openURL('content://com.android.calendar/time/').catch(() =>
     handleError('Não foi possível abrir o calendário.')
   );
+};
+
+export const openSamsungHome = () => {
+  if (Platform.OS === 'android') {
+    console.log("openSamsungLauncher");
+    SystemActionsModule.openSamsungLauncher();
+  }
+};
+
+export const openLauncherSettings = () => {
+  if (Platform.OS === 'android') {
+    console.log("openLauncherSettings");
+    SystemActionsModule.openDefaultAppsSettings();
+  }
 };
